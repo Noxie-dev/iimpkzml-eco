@@ -65,7 +65,8 @@ export default function HomePage() {
 
   return (
     <>
-      <Hero slides={clientSlides} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} />
+      <Hero />
+
       <ConceptSection />
       <ProductGrid
         products={clientProducts}
