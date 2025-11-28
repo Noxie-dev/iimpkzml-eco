@@ -47,7 +47,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
               key={product.id}
               className="group bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:scale-[1.03] hover:shadow-2xl cursor-pointer"
             >
-              <div className="relative w-full h-60 md:h-72 lg:h-80 bg-[#F3EFE9] flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-[240px] sm:h-[260px] bg-[#F3EFE9] overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.name}

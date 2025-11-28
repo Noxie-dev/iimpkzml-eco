@@ -78,7 +78,7 @@ const Hero: React.FC<HeroProps> = ({
 
             {/* Right Image */}
             <div className="flex-1 flex justify-center items-center h-full md:h-5/6 w-full max-w-sm md:max-w-none relative">
-              <div className="relative w-full h-full max-h-[500px]">
+              <div className="relative w-full h-[350px] md:h-[480px]">
                 <Image
                   src={slide.image}
                   alt={slide.title}
