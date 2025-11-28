@@ -9,6 +9,7 @@ interface Product {
   name: string;
   price: number;
   concept: string;
+  image: string;
 }
 
 interface ProductGridProps {
@@ -20,16 +21,6 @@ interface ProductGridProps {
   setCartCount: React.Dispatch<React.SetStateAction<number>>;
   cartCount: number;
 }
-
-// Array of public images to randomize
-const thumbnailImages = [
-  '/images/pl-hol1.jpg',
-  '/images/pl-hol2.png.jpg',
-  '/images/pl-hol3.jpg'
-];
-
-// Helper to pick a random image
-const getRandomImage = () => thumbnailImages[Math.floor(Math.random() * thumbnailImages.length)];
 
 const ProductGrid: React.FC<ProductGridProps> = ({
   products,
@@ -51,8 +42,6 @@ const ProductGrid: React.FC<ProductGridProps> = ({
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
         {displayedProducts.map((product) => {
-          const randomImage = getRandomImage();
-
           return (
             <div
               key={product.id}
@@ -60,7 +49,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
             >
               <div className="relative w-full h-60 md:h-72 lg:h-80 bg-[#F3EFE9] flex items-center justify-center overflow-hidden">
                 <Image
-                  src={randomImage}
+                  src={product.image}
                   alt={product.name}
                   fill
                   className="object-contain group-hover:scale-105 transition-transform duration-500"

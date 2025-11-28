@@ -8,7 +8,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="font-sans bg-white text-[#2B2A28]">
-        <Header brandName="IIMPKZML" logoPath="/images/logo.png" />
+        <Header brandName="IIMPKZML" logoPath="/next.svg" />
         {children}
         <Footer brandName="IIMPKZML" />
       </body>
