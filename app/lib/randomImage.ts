@@ -1,7 +1,7 @@
 export const randomPLImage = () => {
   const images = [
     '/images/pl-hol1.jpg',
-    '/images/pl-hol2.jpg',
+    '/images/pl-hol2.png.jpg',
     '/images/pl-hol3.jpg'
   ];
 
